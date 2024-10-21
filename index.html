@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop Price Chatbot</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="chat-container">
+    <div class="chat-box" id="chat-box"></div>
+    
+    <!-- Input for product name -->
+    <input type="text" id="item-input" placeholder="Enter item name..." onkeypress="checkEnterItem(event)">
+    <button onclick="showPrices()">Show Prices</button>
+    
+    <!-- General Quantity Calculation Section -->
+    <div id="quantity-section" style="display:none;">
+      <input type="number" id="quantity-input" placeholder="Enter quantity..." min="1" value="1">
+      <button onclick="calculateTotal()">Calculate Total</button>
+    </div>
+
+    <!-- Bulk-Only Calculation Section -->
+    <div id="bulk-section" style="display:none;">
+      <input type="number" id="bulk-quantity-input" placeholder="Enter bulk quantity..." min="1" value="1">
+      <button onclick="calculateBulkTotal()">Calculate Bulk Total</button>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
